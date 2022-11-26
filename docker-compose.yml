@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+  customers:
+    build: ./order
+    container_name: orders-container
+    environment:
+      - PORT=9000
+    ports:
+      - '5001:9000'
+    expose:
+      - '9000'
+  products:
+    build: ./product
+    container_name: products-container
+    environment:
+      - PORT=9000
+    ports:
+      - '5002:9000'
+    expose:
+      - '9000'

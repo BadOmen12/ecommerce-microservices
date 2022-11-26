@@ -4,7 +4,7 @@ const app = express()
 
 const PORT = process.env.PORT || 3000;
 
-app.get('/', (res: Response, req: Request) => {
+app.get('/', (req: Request, res: Response) => {
     res.send('Order service')
 })
 
